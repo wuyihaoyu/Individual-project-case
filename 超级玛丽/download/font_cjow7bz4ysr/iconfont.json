@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2076319",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e8a3",
+      "unicode_decimal": 59555
+    },
+    {
+      "icon_id": "13137514",
+      "name": "上一首未点击",
+      "font_class": "shangyishouweidianji",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "13137518",
+      "name": "下一首未点击",
+      "font_class": "xiayishouweidianji",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    }
+  ]
+}

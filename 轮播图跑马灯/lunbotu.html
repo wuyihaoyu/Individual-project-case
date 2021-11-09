@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 650px;
+            height: 360px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .box ul {
+            width: 5000px;
+            list-style: none;
+            position: relative;
+            left: 0;
+
+        }
+
+        .box ul li {
+
+            float: left;
+
+        }
+
+        .leftbtn {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+
+
+        .rightbtn {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            margin-top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <ul id="list">
+            <li><img src="beijing/0.jpg" alt=""></li>
+            <li><img src="beijing/1.jpg" alt=""></li>
+            <li><img src="beijing/2.jpg" alt=""></li>
+            <li><img src="beijing/3.jpg" alt=""></li>
+            <li><img src="beijing/4.jpg" alt=""></li>
+        </ul>
+        <a href="javascript:;" class="leftbtn" id="leftbtn"></a>
+        <a href="javascript:;" class="rightbtn" id="rightbtn"></a>
+    </div>
+    <script>
+        var leftbtn = document.getElementById('leftbtn');
+        var rightbtn = document.getElementById('rightbtn');
+
+        var list = document.getElementById("list");
+
+        var cloneli = list.firstElementChild.cloneNode(true);
+        list.appendChild(cloneli);
+
+        var idx = 0;
+
+
+        rightbtn.onclick = function () {
+            idx++;
+            list.style.left = -idx * 650 + 'px';
+
+            if (idx > 4) {
+                idx = 0;
+                list.style.left = 0;
+
+            }
+
+
+
+        }
+        leftbtn.onclick = function () {
+            idx--;
+
+
+            if (idx < 0) {
+                idx = 5;
+                list.style.left = -idx * 650 + 'px';
+
+            }
+            list.style.left = -idx * 650 + 'px';
+
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

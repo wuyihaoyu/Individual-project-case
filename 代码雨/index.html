@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的代码雨</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        canvas {
+            background: black;
+            /* background: white; */
+            /* background-image: linear-gradient(to right, red, orange, yellow, blue, cyan, purple); */
+            animation: donghua 2s linear 0s infinite;
+        }
+
+        @keyframes donghua {
+            from {
+                filter: hue-rotate(0deg);
+            }
+
+            to {
+                filter: hue-rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <canvas></canvas>
+
+</body>
+
+</html>
+<script>
+
+    var canvas = document.querySelector('canvas');
+    var ctx = canvas.getContext('2d');
+
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+
+    canvas.width = w;
+    canvas.height = h;
+
+    var f = 16;
+    var cloums = parseInt(w / 16);
+    var arr = [];
+    for (var i = 0; i < cloums; i++) {
+        arr[i] = 10;
+    }
+    var str = 'abcdefghijklnmopqrstuvwsyz';
+
+
+    function draw() {
+        ctx.fillStyle = 'rgba(0,0,0,0.01)';
+        ctx.fillRect(0, 0, w, h);
+        ctx.font = f + 'px 微软雅黑';
+        ctx.fillStyle = '#00cc33';
+
+        for (var i = 0; i < cloums; i++) {
+            var index = parseInt(Math.random() * str.length);
+
+
+            ctx.fillText(str[index], i * f, arr[i]);
+            arr[i]++;
+
+            if (arr[i] > canvas.height) {
+                arr[i] = 0;
+            }
+
+        }
+
+
+    }
+
+    setInterval(draw, 10);
+
+</script>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.1.1.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/zui.css" />
+    <link rel="stylesheet" type="text/css" href="css/head.css" />
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!--头部第一个导航条-->
+    <div class="head_daohang">
+        <div class="head_inner">
+
+            <!--=================-->
+            <div class="head_title">
+                <ul class="head">
+                    <li class="head_list">
+                        <a href="#">人才管理/招聘</a>
+                    </li>
+                    <li class="head_list">
+                        <a href="#">全国</a>
+                    </li>
+                    <li class="head_list">
+                        <a href="#">首页</a>
+                    </li>
+                    <li class="head_list">
+                        <a href="#">职位</a>
+                    </li>
+                    <li class="head_list">
+                        <a href="" style="color: #10b041;">校园</a>
+                    </li>
+                    <li class="head_list">
+                        <a href="#">公司</a>
+                    </li>
+                    <li class="head_list">
+                        <a href="#">上传简历</a>
+                    </li>
+                    <li class="head_list">
+                        <a href="#">发现</a>
+                    </li>
+                </ul>
+            </div>
+            <!--===============-->
+            <div class="head_nav_login">
+                <div class="head_search">
+                    <input type="text" name="headSreach" id="headSreach" value="" />
+                    <button class="head_glass"></button>
+                </div>
+                <div class="head_login">
+                    <a href="#" class="login"><i class="icon_qq"></i></a>
+                    <a href="#" class="login"><i class="icon_sina"></i></a>
+                    <a href="#" class="login"><i class="icon_weixin"></i></a>
+                    <a href="#" class="login">注册</a>
+                    <a href="#" class="login">登录</a>
+                </div>
+            </div>
+            <!--============-->
+        </div>
+    </div>
+
+    <!--头部搜索-->
+    <div class="wrap">
+
+        <div class="wrap_logo">
+            <a href="#">
+                <img src="img/fast-reg-text.png" alt="" width="300px" />
+            </a>
+        </div>
+        <div class="wrap_sreach">
+            <input type="text" name="search_text" id="search_text" placeholder="搜索编程语言、职位" />
+            <span class="wrap_xian">|</span>
+            <button class="sreach"><img src="img/sreach_06.png" />搜索</button>
+        </div>
+        <!--================-->
+        <div class="hot_sreach" style="display: none;">
+            <div id="hot_nav">
+                <ul class="hot_ul">
+                    <li><a href="#"><em>JAVA</em><span>热门搜索</span></a></li>
+                    <li><a href="#"><em>javascript</em><span>热门搜索</span></a></li>
+                    <li><a href="#"><em>C++</em><span>热门搜索</span></a></li>
+                    <li><a href="#"><em>C#</em><span>热门搜索</span></a></li>
+                    <li><a href="#"><em>PHP</em><span>热门搜索</span></a></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="side_bars">
+        <ul class="side_list">
+
+            <li>
+                <h2 class="list_h2">技术</h2>
+                <p class="list_p">
+                    <a href="indextwo.html">java</a> <a href="#">PHP</a> <a href="#">web前端</a> <a href="#">算法工程师</a>
+                </p>
+                <p class="list_xian"> > </p>
+            </li>
+            <!--=================-->
+
+            <li>
+
+                <h2 class="list_h2">产品</h2>
+                <p class="list_p">
+                    <a href="#">产品经理</a> <a href="#">产品总监</a> <a href="#">数据产品经理</a>
+                </p>
+                <p class="list_xian"> > </p>
+            </li>
+            <!--=================-->
+
+            <li>
+
+                <h2 class="list_h2">设计</h2>
+                <p class="list_p">
+                    <a href="#">UI设计师</a> <a href="#">平面设计</a> <a href="#">交互设计师</a>
+                </p>
+                <p class="list_xian"> > </p>
+            </li>
+            <!--===================-->
+
+            <li>
+
+                <h2 class="list_h2">运营</h2>
+                <p class="list_p">
+                    <a href="#">新媒体运营</a> <a href="#">产品运营</a> <a href="#">网络推广</a>
+                </p>
+                <p class="list_xian"> > </p>
+            </li>
+            <!--===================-->
+
+            <li>
+
+                <h2 class="list_h2">市场</h2>
+                <p class="list_p">
+                    <a href="#">市场营销</a> <a href="#">市场推广</a> <a href="#">品牌公关</a> <a href="#">策划经理</a>
+                </p>
+                <p class="list_xian"> > </p>
+            </li>
+            <!--====================-->
+
+            <li>
+
+                <h2 class="list_h2">人事/财务/行政</h2>
+                <p class="list_p">
+                    <a href="#">人力资源专员</a> <a href="#">助理</a> <a href="#">行政主管</a>
+                </p>
+                <p class="list_xian"> > </p>
+            </li>
+            <!--================-->
+
+            <li>
+
+                <h2 class="list_h2">高级管理</h2>
+                <p class="list_p">
+                    <a href="#">总裁</a> <a href="#">总经理</a> <a href="#">CEO</a>
+                </p>
+                <p class="list_xian"> > </p>
+            </li>
+        </ul>
+        <!--================-->
+        <div class="side_content">
+            <!-- 
+后端开发
+数据采集 Hadoop Erlang Ruby GIS工程师 .NET Python Golang Java C# Delphi PHP Perl C Node.js C++ VB 语音/视频/图形开发 后端开发 全栈工程师
+
+测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+
+
+            <div class="side_content_list">
+                <div class="content-1">
+                    <h2>技术</h2>
+                    <hr />
+                    <h3> 后端开发</h3>
+                    <p>
+                        <a href="#">数据采集</a>
+                        <a href="#">Hadoop</a>
+                        <a href="#">Erlang</a>
+                        <a href="#">Ruby</a>
+                        <a href="#">GIS工程师</a>
+                        <a href="#">.NET </a>
+                        <a href="#"> Python</a>
+                        <a href="#">Golang</a>
+                        <a href="indextwo.html">Java</a>
+                        <a href="#">C# </a>
+                        <a href="#">PHP</a>
+                        <a href="#">Delphi</a>
+                        <a href="#">Perl</a>
+                        <a href="#">C/C++</a>
+                        <a href="#">Node.js</a>
+                        <a href="#">VB</a>
+                        <a href="#">全栈</a>
+                    </p>
+                </div>
+                <!-- 移动开发 -->
+                <!-- HTML5 移动开发 UE4 移动web前端 JavaScript COCOS2DX Flash开发 iOS Android U3D  -->
+                <div class="content-1">
+
+                    <h3>移动开发</h3>
+                    <hr />
+                    <p>
+                        <a href="#">HTML5</a>
+                        <a href="#">移动开发</a>
+                        <a href="#">UE4</a>
+                        <a href="#"> 移动web前端</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Flash开发</a>
+                        <a href="#">iOS</a>
+                        <a href="#">Android</a>
+                        <a href="#">U3D</a>
+
+                </div>
+
+                <!-- 测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+                <div class="content-1">
+                    <h3>测试</h3>
+                    <hr />
+                    <p>
+                        <a href="#">功能测试</a>
+                        <a href="#">软件测试</a>
+                        <a href="#">硬件测试</a>
+                        <a href="#">移动端测试</a>
+                        <a href="#">测试开发 </a>
+                        <a href="#">游戏测试</a>
+                        <a href="#">渗透测试</a>
+                        <a href="#">自动化测试</a>
+                        <a href="#">性能测试</a>
+
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h3>运维/技术支持</h3>
+                    <hr />
+                    <p>
+                        <a href="#">系统工程师</a>
+                        <a href="#">运维工程师</a>
+                        <a href="#">系统安全</a>
+                        <a href="#">网络安全</a>
+                        <a href="#"> 运维开发工程师</a>
+                        <a href="#">IT技术支持 </a>
+                        <a href="#">网络工程师</a>
+                        <a href="#">DBA</a>
+                    </p>
+                </div>
+                <!-- 运维/技术支持 -->
+                <!-- 系统工程师 运维工程师 系统安全 网络安全 运维开发工程师 IT技术支持 网络工程师 DBA 系统管理员 -->
+
+            </div>
+            <!--==================-->
+            <!--第2个外面的选项li-->
+            <div class="side_content_list" style="display: none;">
+                <div class="content-1">
+                    <h2>技术</h2>
+                    <hr />
+                    <h3> 后端开发</h3>
+                    <p>
+                        <a href="#">数据采集</a>
+                        <a href="#">Hadoop</a>
+                        <a href="#">Erlang</a>
+                        <a href="#">Ruby</a>
+                        <a href="#">GIS工程师</a>
+                        <a href="#">.NET </a>
+                        <a href="#"> Python</a>
+                        <a href="#">Golang</a>
+                        <a href="#">Java</a>
+                        <a href="#">C# </a>
+                        <a href="#">PHP</a>
+                        <a href="#">Delphi</a>
+                        <a href="#">Perl</a>
+                        <a href="#">C/C++</a>
+                        <a href="#">Node.js</a>
+                        <a href="#">VB</a>
+                        <a href="#">全栈</a>
+                    </p>
+                </div>
+                <!-- 移动开发 -->
+                <!-- HTML5 移动开发 UE4 移动web前端 JavaScript COCOS2DX Flash开发 iOS Android U3D  -->
+                <div class="content-1">
+
+                    <h3>移动开发</h3>
+                    <hr />
+                    <p>
+                        <a href="#">HTML5</a>
+                        <a href="#">移动开发</a>
+                        <a href="#">UE4</a>
+                        <a href="#"> 移动web前端</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Flash开发</a>
+                        <a href="#">iOS</a>
+                        <a href="#">Android</a>
+                        <a href="#">U3D</a>
+
+                </div>
+
+                <!-- 测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+                <div class="content-1">
+                    <h3>测试</h3>
+                    <hr />
+                    <p>
+                        <a href="#">功能测试</a>
+                        <a href="#">软件测试</a>
+                        <a href="#">硬件测试</a>
+                        <a href="#">移动端测试</a>
+                        <a href="#">测试开发 </a>
+                        <a href="#">游戏测试</a>
+                        <a href="#">渗透测试</a>
+                        <a href="#">自动化测试</a>
+                        <a href="#">性能测试</a>
+
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h3>运维/技术支持</h3>
+                    <hr />
+                    <p>
+                        <a href="#">系统工程师</a>
+                        <a href="#">运维工程师</a>
+                        <a href="#">系统安全</a>
+                        <a href="#">网络安全</a>
+                        <a href="#"> 运维开发工程师</a>
+                        <a href="#">IT技术支持 </a>
+                        <a href="#">网络工程师</a>
+                        <a href="#">DBA</a>
+                    </p>
+                </div>
+                <!-- 运维/技术支持 -->
+                <!-- 系统工程师 运维工程师 系统安全 网络安全 运维开发工程师 IT技术支持 网络工程师 DBA 系统管理员 -->
+
+            </div>
+            <!--=================-->
+            <!--第3个外面的选项li-->
+            <div class="side_content_list" style="display: none;">
+                <div class="content-1">
+                    <h2>技术</h2>
+                    <hr />
+                    <h3> 后端开发</h3>
+                    <p>
+                        <a href="#">数据采集</a>
+                        <a href="#">Hadoop</a>
+                        <a href="#">Erlang</a>
+                        <a href="#">Ruby</a>
+                        <a href="#">GIS工程师</a>
+                        <a href="#">.NET </a>
+                        <a href="#"> Python</a>
+                        <a href="#">Golang</a>
+                        <a href="#">Java</a>
+                        <a href="#">C# </a>
+                        <a href="#">PHP</a>
+                        <a href="#">Delphi</a>
+                        <a href="#">Perl</a>
+                        <a href="#">C/C++</a>
+                        <a href="#">Node.js</a>
+                        <a href="#">VB</a>
+                        <a href="#">全栈</a>
+                    </p>
+                </div>
+                <!-- 移动开发 -->
+                <!-- HTML5 移动开发 UE4 移动web前端 JavaScript COCOS2DX Flash开发 iOS Android U3D  -->
+                <div class="content-1">
+
+                    <h3>移动开发</h3>
+                    <hr />
+                    <p>
+                        <a href="#">HTML5</a>
+                        <a href="#">移动开发</a>
+                        <a href="#">UE4</a>
+                        <a href="#"> 移动web前端</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Flash开发</a>
+                        <a href="#">iOS</a>
+                        <a href="#">Android</a>
+                        <a href="#">U3D</a>
+
+                </div>
+
+                <!-- 测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+                <div class="content-1">
+                    <h3>测试</h3>
+                    <hr />
+                    <p>
+                        <a href="#">功能测试</a>
+                        <a href="#">软件测试</a>
+                        <a href="#">硬件测试</a>
+                        <a href="#">移动端测试</a>
+                        <a href="#">测试开发 </a>
+                        <a href="#">游戏测试</a>
+                        <a href="#">渗透测试</a>
+                        <a href="#">自动化测试</a>
+                        <a href="#">性能测试</a>
+
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h3>运维/技术支持</h3>
+                    <hr />
+                    <p>
+                        <a href="#">系统工程师</a>
+                        <a href="#">运维工程师</a>
+                        <a href="#">系统安全</a>
+                        <a href="#">网络安全</a>
+                        <a href="#"> 运维开发工程师</a>
+                        <a href="#">IT技术支持 </a>
+                        <a href="#">网络工程师</a>
+                        <a href="#">DBA</a>
+                    </p>
+                </div>
+                <!-- 运维/技术支持 -->
+                <!-- 系统工程师 运维工程师 系统安全 网络安全 运维开发工程师 IT技术支持 网络工程师 DBA 系统管理员 -->
+
+            </div>
+            <!--==============-->
+            <!--第4个外面的li-->
+            <div class="side_content_list" style="display: none;">
+                <div class="content-1">
+                    <h2>技术</h2>
+                    <hr />
+                    <h3> 后端开发</h3>
+                    <p>
+                        <a href="#">数据采集</a>
+                        <a href="#">Hadoop</a>
+                        <a href="#">Erlang</a>
+                        <a href="#">Ruby</a>
+                        <a href="#">GIS工程师</a>
+                        <a href="#">.NET </a>
+                        <a href="#"> Python</a>
+                        <a href="#">Golang</a>
+                        <a href="#">Java</a>
+                        <a href="#">C# </a>
+                        <a href="#">PHP</a>
+                        <a href="#">Delphi</a>
+                        <a href="#">Perl</a>
+                        <a href="#">C/C++</a>
+                        <a href="#">Node.js</a>
+                        <a href="#">VB</a>
+                        <a href="#">全栈</a>
+                    </p>
+                </div>
+                <!-- 移动开发 -->
+                <!-- HTML5 移动开发 UE4 移动web前端 JavaScript COCOS2DX Flash开发 iOS Android U3D  -->
+                <div class="content-1">
+
+                    <h3>移动开发</h3>
+                    <hr />
+                    <p>
+                        <a href="#">HTML5</a>
+                        <a href="#">移动开发</a>
+                        <a href="#">UE4</a>
+                        <a href="#"> 移动web前端</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Flash开发</a>
+                        <a href="#">iOS</a>
+                        <a href="#">Android</a>
+                        <a href="#">U3D</a>
+
+                </div>
+
+                <!-- 测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+                <div class="content-1">
+                    <h3>测试</h3>
+                    <hr />
+                    <p>
+                        <a href="#">功能测试</a>
+                        <a href="#">软件测试</a>
+                        <a href="#">硬件测试</a>
+                        <a href="#">移动端测试</a>
+                        <a href="#">测试开发 </a>
+                        <a href="#">游戏测试</a>
+                        <a href="#">渗透测试</a>
+                        <a href="#">自动化测试</a>
+                        <a href="#">性能测试</a>
+
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h3>运维/技术支持</h3>
+                    <hr />
+                    <p>
+                        <a href="#">系统工程师</a>
+                        <a href="#">运维工程师</a>
+                        <a href="#">系统安全</a>
+                        <a href="#">网络安全</a>
+                        <a href="#"> 运维开发工程师</a>
+                        <a href="#">IT技术支持 </a>
+                        <a href="#">网络工程师</a>
+                        <a href="#">DBA</a>
+                    </p>
+                </div>
+                <!-- 运维/技术支持 -->
+                <!-- 系统工程师 运维工程师 系统安全 网络安全 运维开发工程师 IT技术支持 网络工程师 DBA 系统管理员 -->
+
+            </div>
+            <!--================-->
+            <!--第5个外面的选项li-->
+            <div class="side_content_list" style="display: none;">
+                <div class="content-1">
+                    <h2>技术</h2>
+                    <hr />
+                    <h3> 后端开发</h3>
+                    <p>
+                        <a href="#">数据采集</a>
+                        <a href="#">Hadoop</a>
+                        <a href="#">Erlang</a>
+                        <a href="#">Ruby</a>
+                        <a href="#">GIS工程师</a>
+                        <a href="#">.NET </a>
+                        <a href="#"> Python</a>
+                        <a href="#">Golang</a>
+                        <a href="#">Java</a>
+                        <a href="#">C# </a>
+                        <a href="#">PHP</a>
+                        <a href="#">Delphi</a>
+                        <a href="#">Perl</a>
+                        <a href="#">C/C++</a>
+                        <a href="#">Node.js</a>
+                        <a href="#">VB</a>
+                        <a href="#">全栈</a>
+                    </p>
+                </div>
+                <!-- 移动开发 -->
+                <!-- HTML5 移动开发 UE4 移动web前端 JavaScript COCOS2DX Flash开发 iOS Android U3D  -->
+                <div class="content-1">
+
+                    <h3>移动开发</h3>
+                    <hr />
+                    <p>
+                        <a href="#">HTML5</a>
+                        <a href="#">移动开发</a>
+                        <a href="#">UE4</a>
+                        <a href="#"> 移动web前端</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Flash开发</a>
+                        <a href="#">iOS</a>
+                        <a href="#">Android</a>
+                        <a href="#">U3D</a>
+
+                </div>
+
+                <!-- 测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+                <div class="content-1">
+                    <h3>测试</h3>
+                    <hr />
+                    <p>
+                        <a href="#">功能测试</a>
+                        <a href="#">软件测试</a>
+                        <a href="#">硬件测试</a>
+                        <a href="#">移动端测试</a>
+                        <a href="#">测试开发 </a>
+                        <a href="#">游戏测试</a>
+                        <a href="#">渗透测试</a>
+                        <a href="#">自动化测试</a>
+                        <a href="#">性能测试</a>
+
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h3>运维/技术支持</h3>
+                    <hr />
+                    <p>
+                        <a href="#">系统工程师</a>
+                        <a href="#">运维工程师</a>
+                        <a href="#">系统安全</a>
+                        <a href="#">网络安全</a>
+                        <a href="#"> 运维开发工程师</a>
+                        <a href="#">IT技术支持 </a>
+                        <a href="#">网络工程师</a>
+                        <a href="#">DBA</a>
+                    </p>
+                </div>
+                <!-- 运维/技术支持 -->
+                <!-- 系统工程师 运维工程师 系统安全 网络安全 运维开发工程师 IT技术支持 网络工程师 DBA 系统管理员 -->
+
+            </div>
+            <!--第6个外面的选项li-->
+            <div class="side_content_list" style="display: none;">
+                <div class="content-1">
+                    <h2>技术</h2>
+                    <hr />
+                    <h3> 后端开发</h3>
+                    <p>
+                        <a href="#">数据采集</a>
+                        <a href="#">Hadoop</a>
+                        <a href="#">Erlang</a>
+                        <a href="#">Ruby</a>
+                        <a href="#">GIS工程师</a>
+                        <a href="#">.NET </a>
+                        <a href="#"> Python</a>
+                        <a href="#">Golang</a>
+                        <a href="#">Java</a>
+                        <a href="#">C# </a>
+                        <a href="#">PHP</a>
+                        <a href="#">Delphi</a>
+                        <a href="#">Perl</a>
+                        <a href="#">C/C++</a>
+                        <a href="#">Node.js</a>
+                        <a href="#">VB</a>
+                        <a href="#">全栈</a>
+                    </p>
+                </div>
+                <!-- 移动开发 -->
+                <!-- HTML5 移动开发 UE4 移动web前端 JavaScript COCOS2DX Flash开发 iOS Android U3D  -->
+                <div class="content-1">
+
+                    <h3>移动开发</h3>
+                    <hr />
+                    <p>
+                        <a href="#">HTML5</a>
+                        <a href="#">移动开发</a>
+                        <a href="#">UE4</a>
+                        <a href="#"> 移动web前端</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Flash开发</a>
+                        <a href="#">iOS</a>
+                        <a href="#">Android</a>
+                        <a href="#">U3D</a>
+
+                </div>
+
+                <!-- 测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+                <div class="content-1">
+                    <h3>测试</h3>
+                    <hr />
+                    <p>
+                        <a href="#">功能测试</a>
+                        <a href="#">软件测试</a>
+                        <a href="#">硬件测试</a>
+                        <a href="#">移动端测试</a>
+                        <a href="#">测试开发 </a>
+                        <a href="#">游戏测试</a>
+                        <a href="#">渗透测试</a>
+                        <a href="#">自动化测试</a>
+                        <a href="#">性能测试</a>
+
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h3>运维/技术支持</h3>
+                    <hr />
+                    <p>
+                        <a href="#">系统工程师</a>
+                        <a href="#">运维工程师</a>
+                        <a href="#">系统安全</a>
+                        <a href="#">网络安全</a>
+                        <a href="#"> 运维开发工程师</a>
+                        <a href="#">IT技术支持 </a>
+                        <a href="#">网络工程师</a>
+                        <a href="#">DBA</a>
+                    </p>
+                </div>
+                <!-- 运维/技术支持 -->
+                <!-- 系统工程师 运维工程师 系统安全 网络安全 运维开发工程师 IT技术支持 网络工程师 DBA 系统管理员 -->
+
+            </div>
+            <!--================-->
+            <!--第7个外面的选项li-->
+            <div class="side_content_list" style="display: none;">
+                <div class="content-1">
+                    <h2>技术</h2>
+                    <hr />
+                    <h3> 后端开发</h3>
+                    <p>
+                        <a href="#">数据采集</a>
+                        <a href="#">Hadoop</a>
+                        <a href="#">Erlang</a>
+                        <a href="#">Ruby</a>
+                        <a href="#">GIS工程师</a>
+                        <a href="#">.NET </a>
+                        <a href="#"> Python</a>
+                        <a href="#">Golang</a>
+                        <a href="#">Java</a>
+                        <a href="#">C# </a>
+                        <a href="#">PHP</a>
+                        <a href="#">Delphi</a>
+                        <a href="#">Perl</a>
+                        <a href="#">C/C++</a>
+                        <a href="#">Node.js</a>
+                        <a href="#">VB</a>
+                        <a href="#">全栈</a>
+                    </p>
+                </div>
+                <!-- 移动开发 -->
+                <!-- HTML5 移动开发 UE4 移动web前端 JavaScript COCOS2DX Flash开发 iOS Android U3D  -->
+                <div class="content-1">
+
+                    <h3>移动开发</h3>
+                    <hr />
+                    <p>
+                        <a href="#">HTML5</a>
+                        <a href="#">移动开发</a>
+                        <a href="#">UE4</a>
+                        <a href="#"> 移动web前端</a>
+                        <a href="#">JavaScript</a>
+                        <a href="#">Flash开发</a>
+                        <a href="#">iOS</a>
+                        <a href="#">Android</a>
+                        <a href="#">U3D</a>
+
+                </div>
+
+                <!-- 测试
+功能测试 软件测试 硬件测试 测试工程师 移动端测试 测试开发 游戏测试 渗透测试 性能测试 自动化测试-->
+                <div class="content-1">
+                    <h3>测试</h3>
+                    <hr />
+                    <p>
+                        <a href="#">功能测试</a>
+                        <a href="#">软件测试</a>
+                        <a href="#">硬件测试</a>
+                        <a href="#">移动端测试</a>
+                        <a href="#">测试开发 </a>
+                        <a href="#">游戏测试</a>
+                        <a href="#">渗透测试</a>
+                        <a href="#">自动化测试</a>
+                        <a href="#">性能测试</a>
+
+                    </p>
+                </div>
+                <div class="content-1">
+                    <h3>运维/技术支持</h3>
+                    <hr />
+                    <p>
+                        <a href="#">系统工程师</a>
+                        <a href="#">运维工程师</a>
+                        <a href="#">系统安全</a>
+                        <a href="#">网络安全</a>
+                        <a href="#"> 运维开发工程师</a>
+                        <a href="#">IT技术支持 </a>
+                        <a href="#">网络工程师</a>
+                        <a href="#">DBA</a>
+                    </p>
+                </div>
+                <!-- 运维/技术支持 -->
+                <!-- 系统工程师 运维工程师 系统安全 网络安全 运维开发工程师 IT技术支持 网络工程师 DBA 系统管理员 -->
+
+            </div>
+
+        </div>
+    </div>
+    <!--中部图片-->
+    <div>
+        <img src="img/u.jpg" alt="" style="width: 800px;margin-left: 400px;">
+    </div>
+
+
+
+
+
+    <div class="banquan" style="margin-top: 10px;">
+        <div class="banquan_nav">
+            <div class="foot_logo">
+                <p class="foot_pics"></p>
+
+            </div>
+            <div class="guanzhu">
+                <p class="guanzhu_zi">关注我们</p>
+                <p class="gz_pic i1"></p>
+                <p class="gz_pic i2"></p>
+                <p class="gz_pic i3"></p>
+                <p class="gz_pic i4"></p>
+            </div>
+            <!--===============-->
+
+
+            <!--版权-->
+            <div class="banquan_div">
+                <a href="#">关于我们</a><span>|</span>
+                <a href="#">服务与隐私</a><span>|</span>
+                <a href="#">联系我们</a><span>|</span>
+                <a href="#">网站资质</a><span>|</span>
+                <a href="#">营业执照</a><span>|</span>
+                <a href="#">投诉建议</a>
+                <p class="banquan_zi">2020-2021 ©haha qyer.com All rights reserved. Version v5.57 京ICP备*************号
+                    京公网安备************ 京ICP证********8号</p>
+                <p class="lianjie_p">友情链接：
+                    <a href="#">企业服务</a>
+                    <a href="#">使用与帮助</a>
+                    <a href="#">联系我们</a>
+                    <a href="#">专业保证</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/zui.js" type="text/javascript"></script>
+
+</body>
+
+</html>

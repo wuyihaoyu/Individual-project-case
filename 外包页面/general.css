@@ -1,0 +1,147 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #ECF2F1;
+	font-family: tahoma, Georgia, arial, "����", sans-serif;
+	font-size: 12px;
+	line-height: 150%;
+	color: #006666;
+}
+a{
+	text-decoration: none;
+	color: #CC0000;
+}
+a:hover{
+	border: 1px solid #eee;
+	color: #336699;
+}
+h1, h2, h3{
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#header{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: auto;
+	height: 80px;
+	background-image: url(bg01.jpg);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+#header h1{
+	margin: 0;
+	padding-top: 20px;
+	padding-left: 15px;
+	color: #fff;
+}
+#general{
+	position: absolute;
+	top: 80px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 200px;
+	border-top: 5px solid #c8d5db;
+}
+.row{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 0;
+}
+#realname, #titlename, #birthday, #phone, #mobile, #email, #homepage, #im{
+	display: block;
+	margin: 3px;
+	padding: 0 0 0 2px;
+	font-weight: bold;
+	color: #fff;
+	background-color:#c8d5db;
+}
+#realnameValue, #titleValue, #birthdayValue, #phoneValue, #mobileValue, #emailValue, #homepageValue,#imValue{
+	margin: 0;
+	padding: 0;
+	display: block;
+	text-indent: 0.5em;
+}
+#objective, #skillareas, #history, #awards{
+	margin-left: 200px;
+	padding: 0;
+	background-color: #FFF;
+	width: auto;
+}
+#objective{	border-top: 5px solid #c8d5db;}
+#skillareas{height: 250px;}
+#history{height: 150px;}
+#awards{height: 150px;}
+h2{
+	display: block;
+	margin: 0;
+	padding-top: 2px;
+	padding-left: 15px;
+	font-size: 14px;
+	background-image: url(bg01.jpg);
+	background-repeat: no-repeat;
+	border-bottom: 1px outset #aaa;
+}
+#objective p{
+	margin: 0;
+	padding: 0;
+	text-indent: 3em;
+}
+h3{
+	margin-bottom: 0;
+	padding-left: 5px;
+	font-size: 13px;
+	border-bottom: 2px solid #f00;
+}
+
+#skillareas ol, #history ol{
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.skill, .job{
+	float: left;
+	margin: 0;
+	padding: 3px 0 0 10px;
+	width: 190px;
+}
+.award{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	list-style-type: none;
+}
+.skillest{
+	margin: 0;
+	padding: 0;
+	list-style-type: circle;
+}
+.year{
+	float: left;
+	margin: 0;
+	padding: 0 0 0 3px;
+}
+.employer{
+	color: #3333CC;
+	text-align: center;
+}
+.date, .organization{
+	margin: 0;
+	padding-left: 8px;
+}
+.organization{color: c8d5db;}
+.date, .year{
+	color: red;
+}
+#lastModified, #copyright{
+	margin: 0;
+	padding-left: 10px;
+	width: auto;
+	background-image: url(bg01.jpg);
+}
+#lastModified{
+	border-top: 5px solid #c8d5db;
+}
+.description{text-indent: 2em;}

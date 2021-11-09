@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <style>
+        .container {
+            width: 200px;
+            height: 360px;
+            /* background-color: black; */
+            position: relative;
+            background: url("./img/2.jpg") no-repeat;
+            background-size: 200px 360px;
+        }
+
+        .activity_model {
+            width: 20px;
+            height: 20px;
+            /* background-color: cadetblue; */
+            border: .3px solid #333333;
+            box-sizing: border-box;
+            position: absolute;
+            background: #ffd75e url("./img/1.jpg") center no-repeat;
+            background-size: 15px;
+        }
+
+        .fixed_model {
+            width: 20px;
+            height: 20px;
+            /* background-color: #fefefe; */
+            border: .3px solid #fefefe;
+            box-sizing: border-box;
+            position: absolute;
+            background: #bbbbbb url("./img/3.jpg") center no-repeat;
+            background-size: 15px;
+        }
+
+        .score {
+
+            float: left;
+            margin-left: 5px;
+            margin-top: 20px;
+        }
+
+        span {
+
+            float: left;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+
+
+        <!-- <div class="actvity_model"></div> -->
+    </div>
+    <span>分数：</span>
+    <span id="score">00</span>
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.core.js"></script>
+
+</body>
+
+
+<script>
+
+    var STEP = 20;
+
+    var ROW_COUNT = 18, COL_COUNT = 10;
+
+    const MODELS = [
+        // 第1个模型数据源
+
+        {
+            0: {
+                row: 2,
+                col: 0
+            },
+            1: {
+                row: 2,
+                col: 1
+            },
+            2: {
+                row: 2,
+                col: 2
+            },
+            3: {
+                row: 1,
+                col: 2
+            }
+        },
+        // 第2个模型数据源
+
+        {
+            0: {
+                row: 1,
+                col: 1
+            },
+            1: {
+                row: 0,
+                col: 0
+            },
+            2: {
+                row: 1,
+                col: 0
+            },
+            3: {
+                row: 2,
+                col: 0
+            }
+        },
+        // 第3个模型数据源
+        {
+            0: {
+                row: 1,
+                col: 1
+            },
+            1: {
+                row: 2,
+                col: 1
+            },
+            2: {
+                row: 1,
+                col: 2
+            },
+            3: {
+                row: 2,
+                col: 2
+            }
+        },
+        // 第4个模型数据源(一)
+        {
+            0: {
+                row: 0,
+                col: 0
+            },
+            1: {
+                row: 0,
+                col: 1
+            },
+            2: {
+                row: 0,
+                col: 2
+            },
+            3: {
+                row: 0,
+                col: 3
+            }
+        },
+        // 第5个模型数据源(Z)
+        {
+            0: {
+                row: 1,
+                col: 1
+            },
+            1: {
+                row: 1,
+                col: 2
+            },
+            2: {
+                row: 2,
+                col: 2
+            },
+            3: {
+                row: 2,
+                col: 3
+            }
+        }
+    ]
+
+    var currentModel = {};
+    var score = 0;
+    var currentX = 0;
+    var currentY = 0;
+
+    var fixedblocks = {};
+    var mInterval = null;
+
+
+    init();
+
+    function init() {
+
+        createModel();
+        onKeyDown();
+        // allscore();
+    }
+    function createModel() {
+
+        if (isGameOver()) {
+            gameOver();
+            return;
+        }
+
+        const randow = Math.floor(Math.random() * MODELS.length);
+        currentModel = MODELS[randow];
+
+        currentY = 0;
+        currentX = 0;
+
+        for (var key in currentModel) {
+            var divEle = document.createElement("div");
+            divEle.className = "activity_model";
+            document.getElementById("container").appendChild(divEle);
+        }
+        locationBlocks();
+
+        autoDown();
+    }
+
+    function locationBlocks() {
+
+        checkBound();
+        var eles = document.getElementsByClassName("activity_model");
+        for (var i = 0; i < eles.length; i++) {
+            var activityModelEle = eles[i];
+            const blockModel = currentModel[i];
+            if (blockModel) {
+                activityModelEle.style.top = (currentY + blockModel.row) * STEP + "px";
+                activityModelEle.style.left = (currentX + blockModel.col) * STEP + "px";
+            }
+
+        }
+
+    }
+
+
+
+
+    function onKeyDown() {
+        document.onkeydown = function (event) {
+
+            switch (event.keyCode) {
+                case 38:
+                    console.log("上");
+                    rotate();
+                    break;
+                case 39:
+                    console.log("右");
+                    move(1, 0);
+                    break;
+                case 40:
+                    console.log("下");
+                    move(0, 1);
+                    break;
+                case 37:
+                    console.log("左");
+                    move(-1, 0);
+                    break;
+            }
+
+        }
+
+    }
+
+    function move(x, y) {
+        // var activityModelEle = document.getElementsByClassName("actvity_model")[0]
+        // activityModelEle.style.top = parseInt(activityModelEle.style.top || 0) + y * STEP + "px";
+        // activityModelEle.style.left = parseInt(activityModelEle.style.left || 0) + x * STEP + "px";
+
+        if (isMeet(currentX + x, currentY + y, currentModel)) {
+            if (y !== 0) {
+                fixedBottomModel();
+            }
+            return;
+        }
+
+        currentX += x;
+        currentY += y;
+        locationBlocks();
+    }
+
+
+    function rotate() {
+        const cloneCurrentModel = JSON.parse(JSON.stringify(currentModel));
+
+        for (var key in cloneCurrentModel) {
+            var blockModel = cloneCurrentModel[key];
+            var temp = blockModel.row;
+            blockModel.row = blockModel.col;
+            blockModel.col = 3 - temp;
+        }
+        if (isMeet(currentX, currentY, cloneCurrentModel)) {
+            return;
+        }
+        currentModel = cloneCurrentModel;
+
+        locationBlocks();
+
+    }
+
+    function checkBound() {
+        var leftBound = 0;
+        var rightBound = COL_COUNT;
+        var bottomBound = ROW_COUNT;
+        for (var key in currentModel) {
+            var blockModel = currentModel[key];
+            if ((blockModel.col + currentX) < 0) {
+                currentX++;
+            }
+            if ((blockModel.col + currentX) >= rightBound) {
+                currentX--;
+            }
+            if ((blockModel.row + currentY) >= bottomBound) {
+                currentY--;
+                fixedBottomModel();
+            }
+        }
+    }
+
+    function fixedBottomModel() {
+        var activityModelEles = document.getElementsByClassName("activity_model");
+        for (var i = activityModelEles.length - 1; i >= 0; i--) {
+            var activityModelEle = activityModelEles[i];
+            activityModelEle.className = "fixed_model";
+
+            var blockModel = currentModel[i];
+            fixedblocks[(currentY + blockModel.row) + "_" + (currentX + blockModel.col)] =
+                activityModelEle;
+
+        }
+
+        isRemoveLine();
+
+        createModel();
+
+
+    }
+
+
+
+    function isMeet(x, y, model) {
+        for (var k in model) {
+            var blockModel = model[k];
+            if (fixedblocks[(y + blockModel.row) + "_" + (x + blockModel.col)]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function isRemoveLine() {
+        for (var i = 0; i < ROW_COUNT; i++) {
+            var flag = true;
+            for (var j = 0; j < COL_COUNT; j++) {
+                if (!fixedblocks[i + "_" + j]) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            if (flag) {
+                removeLine(i);
+            }
+        }
+    }
+
+    function removeLine(Line) {
+
+        for (var i = 0; i < COL_COUNT; i++) {
+            document.getElementById("container").removeChild(fixedblocks[Line + "_" + i]);
+            fixedblocks[Line + "_" + i] = null;
+        }
+        score += 10;
+        allscore();
+
+        downLine(Line);
+    }
+
+    function allscore() {
+        var ascore = document.getElementById("score");
+        ascore.innerHTML = score;
+    }
+
+
+
+
+    function downLine(Line) {
+        for (var i = Line - 1; i >= 0; i--) {
+            for (var j = 0; j < COL_COUNT; j++) {
+                if (!fixedblocks[i + "_" + j]) continue;
+
+                fixedblocks[(i + 1) + "_" + j] = fixedblocks[i + "_" + j];
+
+                fixedblocks[(i + 1) + "_" + j].style.top = (i + 1) * STEP + "px";
+
+                fixedblocks[i + "_" + j] = null;
+            }
+        }
+    }
+
+    function autoDown() {
+        if (mInterval) {
+            clearInterval(mInterval);
+        }
+        mInterval = setInterval(function () {
+            move(0, 1);
+
+        }, 600)
+    }
+
+    function isGameOver() {
+        for (var i = 0; i < COL_COUNT; i++) {
+            if (fixedblocks["0_" + i]) {
+                return true;
+            };
+        }
+        return false;
+    }
+
+    function gameOver() {
+        if (mInterval) {
+            clearInterval(mInterval);
+
+        }
+        alert("游戏结束，请查看成绩！");
+    }
+
+
+</script>
+
+</html>
